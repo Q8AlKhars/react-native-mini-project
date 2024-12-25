@@ -10,13 +10,14 @@ const HomeScreen = () => {
     return (
       <TouchableOpacity
         key={item.id}
-        onPress={() => navigation.navigate("Products", { name: item.name })}
+        onPress={() => navigation.navigate("Products", { item })}
       >
         <Image
           source={{ uri: item.image }}
-          style={{ width: 100, height: 100 }}
+          style={{ width: 200, height: 200 }}
         />
-        <Text>{item.name}</Text>
+        <Text style={styles.productName}>{item.name}</Text>
+        <Text style={styles.productName}>More ....</Text>
       </TouchableOpacity>
     );
   });
@@ -26,4 +27,9 @@ const HomeScreen = () => {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  productName: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});

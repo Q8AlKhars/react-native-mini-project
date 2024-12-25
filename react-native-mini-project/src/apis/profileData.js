@@ -3,7 +3,7 @@ const profileData = {
 
   age: "30",
 
-  married: True,
+  married: true,
 };
 
 export default profileData;
